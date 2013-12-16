@@ -11,7 +11,7 @@ class User
   property :email, String
   property :password_digest, Text # holds password & salt - text as string is 50 chars
 
-  validates_confirmation_of :password
+  validates_confirmation_of :password # built in method of DataMapper to validate 'anything' with 'anything_confirmation'
 
   def password=(password)
     @password = password

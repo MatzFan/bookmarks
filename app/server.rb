@@ -2,6 +2,7 @@
 
 require 'sinatra'
 require 'data_mapper'
+require 'rack-flash'
 require './lib/link' # must be done after DataMapper is initialized
 require './lib/tag' # ditto
 require './lib/user' # ditto
@@ -9,7 +10,8 @@ require_relative 'helpers/application'
 require_relative 'data_mapper_setup'
 
 enable :sessions # Sinatra
-set :session_secret, 'super secret'
+set :session_secret, 'my unique encryption key!'
+use Rack::Flash
 
 get '/' do
   @links = Link.all
@@ -34,13 +36,20 @@ get '/tags/:text' do
 end
 
 get '/users/new' do
+  @user = User.new # will be nil if user not sucessfully created
   erb :"users/new" # quotes to avoid interpreter trying to divide!
 end
 
 post '/users' do
-  user = User.create(email: params[:email],
+  # may be in invalid state
+  @user = User.create(email: params[:email],
               password: params[:password],
               password_confirmation: params[:password_confirmation])
-  session[:user_id] = user.id # sets a session cookie for the user
-  redirect to('/')
+  if @user.save # will be false if save fails - i.e. new users was't crearted (is nil?)
+    session[:user_id] = @user.id # sets a session cookie for the user
+    redirect to('/')
+  else
+    flash[:notice] = "Sorry, your passwords don't match"
+    erb :"users/new" #redirect to same route
+  end
 end

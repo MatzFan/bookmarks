@@ -3,11 +3,14 @@
 <head>
   <title>Bookmark manager</title>
   <link rel="stylesheet" type="text/css" href="/css/application.css">
-  <body>
-    <% if current_user %>
-      Welcome, <%= current_user.email %>
-    <% end %>
-    <%= yield %> <!-- yields to erb code -->
-  </body>
 </head>
+<body>
+  <% if current_user %>
+    Welcome, <%= current_user.email %>
+  <% end %>
+  <% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+  <% end %>
+  <%= yield %> <!-- yields to erb code -->
+</body>
 </html>
