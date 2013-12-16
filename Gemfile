@@ -9,9 +9,12 @@ group :development do
 end
 
 group :test do
+  gem "database_cleaner"
   gem "capybara"
   gem "rspec"
   gem "guard"
-  gem "growl_notify"
+  gem "growl"
+  gem "growl-rspec"
+  gem "guard-rspec"
 end
 
