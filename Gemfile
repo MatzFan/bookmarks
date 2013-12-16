@@ -8,9 +8,10 @@ group :development do
   gem "shotgun"
 end
 
-group "test" do
+group :test do
   gem "capybara"
   gem "rspec"
   gem "guard"
+  gem "growl_notify"
 end
 

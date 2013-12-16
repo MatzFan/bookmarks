@@ -64,6 +64,8 @@ GEM
     fastercsv (1.5.5)
     ffi (1.9.3)
     formatador (0.2.4)
+    growl_notify (0.0.3)
+      rb-appscript
     guard (2.2.5)
       formatador (>= 0.2.4)
       listen (~> 2.1)
@@ -92,6 +94,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rb-appscript (0.6.1)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
@@ -125,6 +128,7 @@ DEPENDENCIES
   capybara
   data_mapper
   dm-postgres-adapter
+  growl_notify
   guard
   rspec
   shotgun
