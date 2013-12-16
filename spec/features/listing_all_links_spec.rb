@@ -23,7 +23,7 @@ feature "User browses the list of links" do
   end
 
   scenario "filtered by a tag" do
-    visit '/tags/search'
+    visit '/tags/search' # use 'search' as tag to make route explicit
     expect(page).not_to have_content("Maker's Academy")
     expect(page).not_to have_content("Code.org")
     expect(page).to have_content("Google")
