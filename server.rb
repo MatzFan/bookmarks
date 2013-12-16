@@ -11,9 +11,10 @@ DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 #databaase address format as follows: dbtype://user:password@hostname:port/databasename
 
 require './lib/link' # must be done after DataMapper is initialized
+require './lib/tag' # must be done after DataMapper is initialized
 
 DataMapper.finalize # must be doen after initializing
-DataMapper.auto_upgrade! # creartes the tables
+DataMapper.auto_upgrade! # creates the tables
 
 get '/' do
   @links = Link.all
@@ -23,6 +24,10 @@ end
 post '/links' do
   url = params[:url]
   title = params[:title]
-  Link.create(url: url, title: title)
+  tags = params['tags'].split(' ').map do |tag|
+    #find or create a new tag
+    Tag.first_or_create(text: tag) # first_or_create is DataMapper method
+  end
+  Link.create(url: url, title: title, tags: tags) # tags is array
   redirect to '/'
 end
