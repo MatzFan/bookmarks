@@ -11,7 +11,13 @@ feature "User signs up" do
     lambda { sign_up('a@a.com', 'pass', 'wrong') }.should change(User, :count).by(0)
     # ensure user is not redirected and an error message is displayed
     expect(current_path).to eq('/users') # current_path is Capy built in!
-    expect(page).to have_content("Sorry, your passwords don't match")
+    expect(page).to have_content("Password does not match the confirmation")
+  end
+
+  scenario "with an email that is already registered" do
+    lambda { sign_up }.should change(User, :count).by(1)
+    lambda { sign_up }.should change(User, :count).by(0) # duplicate user email should not be added
+    expect(page).to have_content("This email is already taken")
   end
 
   def sign_up(email = "alice@example.com", password = "oranges!", password_confirmation = "oranges!")

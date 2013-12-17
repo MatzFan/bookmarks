@@ -49,7 +49,7 @@ post '/users' do
     session[:user_id] = @user.id # sets a session cookie for the user
     redirect to('/')
   else
-    flash[:notice] = "Sorry, your passwords don't match"
+    flash.now[:errors] = @user.errors.full_messages
     erb :"users/new" #redirect to same route
   end
 end
