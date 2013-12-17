@@ -7,6 +7,16 @@
 <body>
   <% if current_user %>
     Welcome, <%= current_user.email %>
+    <form method="post" action="/sessions">
+      <!-- hidden form request with '_method' name overides form method type with that specified - here i.e. 'DELETE' -->
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Sign out">
+    </form>
+  <% end %>
+  <% if flash[:notice] %>
+    <div id="notice">
+      <%= flash[:notice] %>
+    </div>
   <% end %>
   <% if flash[:errors] && !flash[:errors].empty? %>
     Sorry, there were the following problems with the form.
