@@ -12,15 +12,7 @@ Dir.glob("./app/controllers/*").each { |controller| require controller }
 
 require_relative 'data_mapper_setup' # AFTER MODELS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
-# require_relative './controllers/users'
-# require_relative './controllers/sessions'
-# require_relative './controllers/links'
-# require_relative './controllers/tags'
-# require_relative './controllers/application'
-
-
 enable :sessions # Sinatra
 set :session_secret, 'my unique encryption key!'
 use Rack::Flash
-set :partial_template_engine, :erb
+set :partial_template_engine, :erb # erb as oppose to HAML which is default
