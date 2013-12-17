@@ -2,7 +2,7 @@
 
 <form action="/users" method="post">
   Email: <input type="text" name="email" value="<% @user.email %>"> <!-- use email from instance variable so data is retained & re-rendered even if user save fails-->
-  Password: <input type="text" name="password">
-  Password confirmation: <input type="text" name="password_confirmation">
+  Password: <input type="password" name="password">
+  Password confirmation: <input type="password" name="password_confirmation">
   <input type="submit" value="Sign up">
 </form>

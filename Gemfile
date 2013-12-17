@@ -6,6 +6,7 @@ gem "dm-postgres-adapter"
 gem "bcrypt-ruby"
 gem "rack-flash3"
 gem "sinatra-partial"
+gem "pg" # for heroku postgres
 
 group :development do
   gem "shotgun"
