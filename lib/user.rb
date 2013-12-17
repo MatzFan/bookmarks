@@ -13,6 +13,15 @@ class User
 
   validates_confirmation_of :password # built in method of DataMapper to validate 'anything' with 'anything_confirmation'
 
+  def self.authenticate(email, password)
+    user = first(email: email)
+    if user && BCrypt::Password.new(user.password_digest) == password
+      user # return user object from the db
+    else
+      nil
+    end
+  end
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
