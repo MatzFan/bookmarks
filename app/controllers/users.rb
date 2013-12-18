@@ -16,3 +16,7 @@ post '/users' do
     erb :"users/new" #redirect to same route
   end
 end
+
+get '/users/forgotten_password' do
+  erb :"users/forgotten_password"
+end
