@@ -1,5 +1,7 @@
 env = ENV['RACK_ENV'] || 'development'
 
+Dir.glob("./app/models/*").each { |model| require model }
+
 # setup DB depending on env we want
 #DataMapper::Logger.new($stdout, :debug) # enables debug mode - puts SQL on command line - BEFORE SETUP
 

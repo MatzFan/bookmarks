@@ -8,7 +8,6 @@ require 'rack-flash'
 
 require_relative 'helpers/application'
 
-Dir.glob("./app/models/*").each { |model| require model }
 Dir.glob("./app/controllers/*").each { |controller| require controller }
 
 require_relative 'data_mapper_setup' # AFTER MODELS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

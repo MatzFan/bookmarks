@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f07ce8-2291-4f9e-b5c2-ec0ff6e356c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/me.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/features/helpers/user.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/features/user_forgets_password_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/adding_links_spec.rb" afterPath="$PROJECT_DIR$/spec/features/adding_links_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bookmarks.iml" afterPath="$PROJECT_DIR$/.idea/bookmarks.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/data_mapper_setup.rb" afterPath="$PROJECT_DIR$/app/data_mapper_setup.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/forgotten_password.erb" afterPath="$PROJECT_DIR$/app/views/users/forgotten_password.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/link.rb" afterPath="$PROJECT_DIR$/app/models/link.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/server.rb" afterPath="$PROJECT_DIR$/app/server.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/helpers/session.rb" afterPath="$PROJECT_DIR$/spec/features/helpers/session.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/tag.rb" afterPath="$PROJECT_DIR$/app/models/tag.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/user_sign_in_out_spec.rb" afterPath="$PROJECT_DIR$/spec/features/user_sign_in_out_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/user_sign_up_spec.rb" afterPath="$PROJECT_DIR$/spec/features/user_sign_up_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bookmarks.iws" />
@@ -50,19 +32,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/features/helpers/user.rb">
+      <file leaf-file-name="server.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/server.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="46" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+            <state line="9" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_management_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/features/user_management_spec.rb">
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/features/helpers/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+            <state line="5" column="46" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
@@ -86,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_mapper_setup.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="data_mapper_setup.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/data_mapper_setup.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+            <state line="12" column="0" selection-start="543" selection-end="543" vertical-scroll-proportion="0.27108434" vertical-offset="0" max-vertical-offset="664">
               <folding />
             </state>
           </provider>
@@ -104,19 +86,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_forgets_password_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/features/user_forgets_password_spec.rb">
+      <file leaf-file-name="users.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="41" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users.rb">
+      <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="11" column="22" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
               <folding />
             </state>
           </provider>
@@ -131,10 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_sign_in_out_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user_sign_in_out_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/features/user_sign_in_out_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="704" selection-end="704" vertical-scroll-proportion="0.77223086" vertical-offset="0" max-vertical-offset="720">
+            <state line="33" column="0" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -157,7 +139,6 @@
         <option value="$PROJECT_DIR$/spec/link_spec.rb" />
         <option value="$PROJECT_DIR$/spec/features/user_forgets_password_spec.rb" />
         <option value="$PROJECT_DIR$/Rakefile" />
-        <option value="$PROJECT_DIR$/app/server.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/link.rb" />
         <option value="$PROJECT_DIR$/app/models/tag.rb" />
@@ -165,8 +146,9 @@
         <option value="$PROJECT_DIR$/spec/features/adding_links_spec.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/users/forgotten_password.erb" />
-        <option value="$PROJECT_DIR$/app/data_mapper_setup.rb" />
         <option value="$PROJECT_DIR$/spec/features/user_sign_in_out_spec.rb" />
+        <option value="$PROJECT_DIR$/app/server.rb" />
+        <option value="$PROJECT_DIR$/app/data_mapper_setup.rb" />
       </list>
     </option>
   </component>
@@ -628,6 +610,11 @@
       <created>1387236563803</created>
       <updated>1387236563803</updated>
     </task>
+    <task id="LOCAL-00001" summary="Used gem 'dm-constraints' and refactored database schema to use explicit fk constrints">
+      <created>1387465322539</created>
+      <updated>1387465322539</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -692,6 +679,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Used gem 'dm-constraints' and refactored database schema to use explicit fk constrints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Used gem 'dm-constraints' and refactored database schema to use explicit fk constrints" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1363,13 +1352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/server.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="6" selection-start="87" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://DATABASE/0b4c9951-9042-4aea-b99e-93358dee2b6b.schema:bookmark_manager_development.public">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1392,13 +1374,6 @@
             <Category>Key columns</Category>
             <Category>Columns</Category>
           </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="303" selection-end="303" vertical-scroll-proportion="0.31626505" vertical-offset="0" max-vertical-offset="664">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1514,13 +1489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/data_mapper_setup.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
@@ -1530,7 +1498,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/features/user_sign_in_out_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="704" selection-end="704" vertical-scroll-proportion="0.77223086" vertical-offset="0" max-vertical-offset="720">
+        <state line="33" column="0" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="22" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/server.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/data_mapper_setup.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="543" selection-end="543" vertical-scroll-proportion="0.27108434" vertical-offset="0" max-vertical-offset="664">
           <folding />
         </state>
       </provider>
