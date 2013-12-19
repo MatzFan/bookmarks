@@ -3,6 +3,7 @@
 require 'sinatra'
 require 'sinatra/partial'
 require 'data_mapper'
+require 'dm-constraints'
 require 'rack-flash'
 
 require_relative 'helpers/application'

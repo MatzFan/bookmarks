@@ -1,10 +1,11 @@
+require 'dm-constraints'
+
 class Tag
 
   include DataMapper::Resource
 
-  has n, :links, through: Resource
+  property :text, String, key: true
 
-  property :id, Serial
-  property :text, String
+  has n, :links, through: Resource, constraint: :protect
 
 end

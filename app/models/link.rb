@@ -1,11 +1,13 @@
+require 'dm-constraints'
+
 class Link
 
   include DataMapper::Resource
 
-  has n, :tags, through: Resource
-
-  property :id, Serial # Serial auto-increments
+  property :id, Serial, key: true # Serial auto-increments
   property :title, String
   property :url, String
+
+  has n, :tags, through: Resource, constraint: :protect
 
 end # of class

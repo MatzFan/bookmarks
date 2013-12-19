@@ -1,3 +1,4 @@
+require 'dm-constraints'
 require 'bcrypt'
 
 class User
@@ -7,8 +8,8 @@ class User
   attr_reader :password
   attr_accessor :password_confirmation
 
-  property :id, Serial
-  property :email, String, :unique => true, :message => "This email is already taken"
+  property :id, Serial, key: true
+  property :email, String, :unique => true, :message => 'This email is already taken'
   property :password_digest, Text # holds password & salt - text as string is 50 chars
 
   validates_confirmation_of :password # built in method of DataMapper to validate 'anything' with 'anything_confirmation'
