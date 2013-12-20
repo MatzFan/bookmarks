@@ -1,16 +1,49 @@
 require 'spec_helper'
+require_relative 'helpers/user'
+
+include UserHelpers
 
 feature 'User forgets password' do
+
+  before(:each) do
+    Sinatra::Application.any_instance.stub(:send_simple_message) # stops mailgun emails!
+  end
+
+  let(:user) { setup_user } # do not put in instance variable!!!
+
   scenario 'Forgotten password button redirects to ' do
     visit('/sessions/new')
     click_button 'Forgot password'
     expect(page.current_path).to eq('/users/forgotten_password')
   end
 
-  scenario 'Submit button on /forgotten_password page records user email address' do
+  scenario 'entering an invalid email address displays an appropriate message' do
+    visit('/users/forgotten_password')
+    fill_in :email, with: 'notindatabase@test.com'
+    click_button :Submit
+    expect(page).to have_content('Not a valid email address')
+  end
+
+  scenario 'entering a valid email address displays a message confirming an email has been sent' do
+    setup_user
     visit('/users/forgotten_password')
     fill_in :email, with: 'test@test.com'
-    expect(page.current_path).to eq('/users/forgotten_password')
+    click_button :Submit
+    expect(page).to have_content('message sent')
+  end
+
+  scenario 'entering a valid email address sets the password_token field for the user ' do
+    expect(user.password_token).to be_nil
+    visit('/users/forgotten_password')
+    fill_in :email, with: 'test@test.com'
+    click_button :Submit
+    expect(user.reload.password_token).not_to be_nil
+  end
+
+  scenario 'user clicking on tokenised link should be found in the database' do
+    token = '1234abcd'
+    visit("users/reset_password/#{token}")
+    expect(User.first(password_token: '1234abcd')).to eq(@user)
   end
 
 end # of feature

@@ -6,6 +6,8 @@ require 'capybara/rspec'
 
 Capybara.app = Sinatra::Application
 
+DataMapper.auto_migrate!
+
 RSpec.configure do |config|
 
   config.before(:suite) do

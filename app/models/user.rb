@@ -11,6 +11,8 @@ class User
   property :id, Serial, key: true
   property :email, String, :unique => true, :message => 'This email is already taken'
   property :password_digest, Text # holds password & salt - text as string is 50 chars
+  property :password_token, Text
+  property :password_token_timestamp, DateTime
 
   validates_confirmation_of :password # built in method of DataMapper to validate 'anything' with 'anything_confirmation'
 

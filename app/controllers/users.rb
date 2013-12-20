@@ -1,4 +1,5 @@
-require 'rest-client'
+MAILGUN_API_KEY, MAILGUN_DOMAIN = ENV['MAILGUN_API_KEY'], ENV['MAILGUN_BOOKMARKS']
+require 'rest_client'
 
 get '/users/new' do
   @user = User.new # will be nil if user not sucessfully created
@@ -29,7 +30,8 @@ post '/users/forgotten_password' do
     @token = Array.new(64) {(65 + rand(58)).chr}.join
     user.password_token = @token
     user.password_token_timestamp = Time.now
-    user.save
+    a = user.save
+    puts "Saved: #{a}"
     send_simple_message(user)
     flash.now[:notice] = 'message sent'
   else
@@ -41,20 +43,15 @@ end
 get '/users/reset_password/:token' do
   user = User.first(password_token: params[:token])
   if user
-    #if user.password_token_timestamp
-
-
-    #end
+    erb :'users/password_reset'
   end
 end
 
 def send_simple_message(user)
-  domain = 'app20456058.mailgun.org'
-  api_key = 'key-9-beatnxb3hehaihwauvqj54p0yb70e2'
-  RestClient.post "https://api:#{api_key}"\
-  "@api.mailgun.net/v2/#{domain}/messages",
-                  :from => "Password reset <reset@#{domain}>",
+  RestClient.post "https://api:#{MAILGUN_API_KEY}"\
+  "@api.mailgun.net/v2/#{MAILGUN_DOMAIN}/messages",
+                  :from => "Password reset <noreply@#{MAILGUN_DOMAIN}>",
                   :to => "#{user.email}",
                   :subject => 'Hello',
-                  :text => "Follow this link to reset your password\n #{user.password_token}"
+                  :text => "Follow this link to reset your password:\n #{user.password_token}"
 end

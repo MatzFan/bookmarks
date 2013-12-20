@@ -11,6 +11,7 @@ gem 'bcrypt-ruby'
 gem 'rack-flash3'
 gem 'sinatra-partial'
 gem 'pg' # for heroku postgres
+gem 'rest-client' # for mailgun
 
 group :development do
   gem 'shotgun'
