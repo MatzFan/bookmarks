@@ -6,7 +6,7 @@ require 'capybara/rspec'
 
 Capybara.app = Sinatra::Application
 
-DataMapper.auto_migrate!
+#DataMapper.auto_migrate! # to auto_migrate the Test database
 
 RSpec.configure do |config|
 
