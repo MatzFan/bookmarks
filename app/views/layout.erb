@@ -2,11 +2,13 @@
 <html>
 <head>
   <title>Bookmark manager</title>
-  <link rel="stylesheet" type="text/css" href="/css/application.css">
+  <link rel="stylesheet" type="text/css" href="application.css">
 </head>
 <body>
   <%= partial :welcome_message %>
   <%= partial :flash %>
   <%= yield %> <!-- yields to erb code -->
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script src="/javascript/application.js"></script>
 </body>
 </html>
