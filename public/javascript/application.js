@@ -24,5 +24,11 @@ function showLinkFavouriteNotice(link) {
   var message = favourited ?
                 name + ' was added to favourites' :
                 name + ' was removed from favourites';
-  console.log(message);
+                // jQuery addClass('flash notice') equiv. to addClass('flash').addClass('notice')
+  var flash = $("<div></div>").addClass('flash notice').html(message);
+  $(flash).appendTo('#flash-container');
+  // add tmeout so flash message dissapear after 3 seconds
+  setTimeout(function() {
+    $(flash).fadeOut();
+  }, 3000);
 }
