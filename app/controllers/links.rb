@@ -8,3 +8,9 @@ post '/links' do
   Link.create(url: url, title: title, tags: tags) # tags is array
   redirect to '/'
 end
+
+get '/links/new' do
+  # suppresses layout rendering for JS/Ajax requests (request.xhr? is true)
+  # this is not needed because we do not need to render a new page :)
+  erb :'links/new', :layout => !request.xhr?
+end

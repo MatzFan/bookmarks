@@ -1,6 +1,6 @@
 get '/users/new' do
   @user = User.new # will be nil if user not sucessfully created
-  erb :'users/new' # quotes to avoid interpreter trying to divide!
+  erb :'users/new', :layout => !request.xhr? # quotes to avoid interpreter trying to divide!
 end
 
 post '/users' do
@@ -13,12 +13,12 @@ post '/users' do
     redirect to('/')
   else
     flash.now[:errors] = @user.errors.full_messages
-    erb :'users/new' #redirect to same route
+    erb :'users/new', :layout => !request.xhr? #redirect to same route
   end
 end
 
 get '/users/forgotten_password' do
-  erb :'users/forgotten_password'
+  erb :'users/forgotten_password', :layout => !request.xhr?
 end
 
 post '/users/forgotten_password' do
@@ -33,7 +33,7 @@ post '/users/forgotten_password' do
   else
     flash.now[:notice] = 'Not a valid email address'
   end
-  erb :'users/forgotten_password'
+  erb :'users/forgotten_password', :layout => !request.xhr?
 end
 
 get '/users/reset_password/:token' do

@@ -25,5 +25,6 @@ group :test do
   gem 'growl'
   gem 'growl-rspec'
   gem 'guard-rspec'
+  gem 'poltergeist'
 end
 
