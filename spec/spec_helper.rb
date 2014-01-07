@@ -8,7 +8,7 @@ require 'capybara/poltergeist'
 Capybara.app = Sinatra::Application
 Capybara.javascript_driver = :poltergeist
 
-#DataMapper.auto_migrate! # to auto_migrate the Test database
+# DataMapper.auto_migrate! # to auto_migrate the Test database
 
 RSpec.configure do |config|
 

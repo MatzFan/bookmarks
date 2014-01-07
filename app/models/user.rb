@@ -17,6 +17,8 @@ class User
   property :password_token, Text
   property :password_token_timestamp, DateTime
 
+  has n, :links, through: Resource, constraint: :protect
+
   validates_confirmation_of :password # built in method of DataMapper to validate 'anything' with 'anything_confirmation'
 
   def self.authenticate(email, password)
